@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 0px 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #06283D;
+}
+
+.container {
+    max-width: 400px;
+    height: 260px;
+    background: #fff;
+    padding: 20px 25px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: 0.6s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container .active {
+    height: 520px;
+}
+
+header h1{
+    font-size: 23px;
+    font-weight: 500;
+}
+
+header p{
+    
+    margin-top: 5px;
+    color: #575757;
+    font-size: 16px;
+
+}
+
+.container .form{
+    margin: 20px 0 25px;
+}.form :where(input, button){
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.1s ease;
+}
+
+.form input{
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid #999;
+}
+
+.form input:focus{
+    box-shadow: 0 3px 6px  rgba(0, 0, 0, 0.13);  
+}
+
+.form input::placeholder{
+    color: #999;
+}
+
+.form button{
+color: #fff;
+cursor: pointer;
+margin-top: 20px;
+font-size: 17px;
+background: #5425ff;
+}
+
+.qr-code{
+    opacity: 0;
+    display: flex;
+    padding: 33px 0;
+    border-radius: 5px;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.container .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.qr-code img{
+    width: 170px;
+}
+
+@media (max-width: 420px) {
+    .container{
+       height: 250px;
+       padding: 16px 20px; 
+    }
+
+    container.active{
+        height: 500px;
+    }
+
+    header p{
+        color: #696969;
+    }
+
+    .form:where(input, button){
+        height: 52px;
+    }
+
+    .qr-code img{
+        width: 160px;
+    }
+}
