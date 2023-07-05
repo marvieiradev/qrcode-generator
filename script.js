@@ -1,9 +1,12 @@
 const container = document.querySelector(".container")
-const qrInput = container.querySelector(".form input")
-const generateBtn = container.querySelector(".form button")
-const qrImg = container.querySelector(".qr-code img")
+const qrInput = document.querySelector(".container .form input")
+const generateBtn = document.querySelector(".container .form button")
+const qrImg = document.querySelector(".container .qr-code img")
 
 let preValue;
+let size = "150x150";
+let color = "000000";
+let bgcolor = "FFFFFF";
 
 generateBtn.addEventListener("click",()=>{
     let qrValue=qrInput.value.trim();
@@ -12,16 +15,15 @@ generateBtn.addEventListener("click",()=>{
     }
     preValue = qrValue;
     generateBtn.innerText ="Gerando QR Code...";
-    qrImg.src=`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example${qrValue}`;
+    qrImg.src=`https://api.qrserver.com/v1/create-qr-code/?format=svg&color=${color}&bgcolor=${bgcolor}&size=${size}&data=${qrValue}`;
     qrImg.addEventListener("load", ()=>{
-        container.classList.add("active")
+        container.style.height = '530px'
         generateBtn.innerText="Gerar QR Code"
     })
 })
 
 qrInput.addEventListener("keyup", ()=>{
     if(!qrInput.value.trim()) {
-        container.classList.remove("active")
         preValue = ""
     }
 })
