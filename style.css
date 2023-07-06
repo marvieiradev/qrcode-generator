@@ -15,8 +15,8 @@ body {
 }
 
 .container {
-    max-width: 400px;
-    height: 250px;
+    min-width: 400px;
+    height: 320px;
     background: #fff;
     padding: 20px 25px;
     overflow: hidden;
@@ -27,15 +27,14 @@ body {
 }
 
 header h1 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 header p {
-    margin-top: 5px;
     color: #575757;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .container .form {
@@ -65,10 +64,35 @@ header p {
     color: #999;
 }
 
+.form .opcoes {
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #dddddd;
+}
+
+.form .opcoes h1 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.form .opcoes label {
+    font-size: 16px;
+}
+
+.form .opcoes input {
+    width: 50px;
+    height: 25px;
+    padding: 0;
+}
+
 .form button {
     color: #fff;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 17px;
     background: #5425ff;
 }
@@ -76,7 +100,7 @@ header p {
 .qr-code {
     opacity: 0;
     display: flex;
-    padding: 33px 0;
+    padding: 20px 0;
     border-radius: 5px;
     align-items: center;
     pointer-events: none;

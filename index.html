@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <title>QR Code Generator</title>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -17,7 +19,18 @@
         </header>
         <div class="form">
             <input type="text" spellcheck="false" placeholder="Digite um texto ou url">
-           <button>Gerar QR Code</button>
+
+            <div class="opcoes">
+                <h1>Cores</h1>
+                <div class="colors">
+                    <label>Fundo: </label>
+                    <input type="color" id="BGColor" class="corFundo" />
+                    <label>Linhas: </label>
+                    <input type="color" id="BGColor" class="corLinha" />
+                </div>
+
+            </div>
+            <button>Gerar QR Code</button>
         </div>
         <div class="qr-code">
             <img src="" alt="qr-code">
@@ -25,6 +38,7 @@
     </div>
 
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
