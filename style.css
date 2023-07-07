@@ -118,6 +118,18 @@ header p {
     width: 170px;
 }
 
+.download button {
+    padding: 5px 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 15px;
+    background: #5425ff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
 @media (max-width: 420px) {
     .container {
         height: 250px;
