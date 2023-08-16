@@ -1,5 +1,5 @@
 const container = document.querySelector(".container")
-const qrInput = document.querySelector(".container .form input")
+const qrInput = document.querySelector(".container .form #text")
 const generateBtn = document.querySelector(".container .form button")
 const qrImg = document.querySelector(".container .qr-code img")
 
@@ -30,7 +30,7 @@ generateBtn.addEventListener("click", () => {
     generateBtn.innerText = "Gerando QR Code...";
     qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?format=svg&color=${color}&bgcolor=${bgcolor}&size=${size}&data=${qrValue}`;
     qrImg.addEventListener("load", () => {
-        container.style.height = '600px'
+        container.style.height = '650px'
         generateBtn.innerText = "Gerar QR Code"
         imgSVG = qrImg.src
         imgPNG = (qrImg.src).replace('svg', 'png')
