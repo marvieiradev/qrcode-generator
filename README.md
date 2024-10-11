@@ -8,4 +8,4 @@ Esse é um gerador de QR code bem simples porém efetivo. Com ele é possível c
 
 Projeto desenvolvido utilizando apenas HTML, CSS e JavaScript.
 
-<img src="screenshot.jpg"/>
+<img src="screenshot.png"/>
